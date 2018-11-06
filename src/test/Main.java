@@ -1,5 +1,7 @@
 package test;
 
+import com.alibaba.fastjson.JSON;
+
 import java.util.List;
 
 public class Main implements CallBack {
@@ -10,13 +12,13 @@ public class Main implements CallBack {
 
         LoginPresenter loginPresenter = new LoginPresenter();
         loginPresenter.setCallBack(main);
-        loginPresenter.login(0);
+        loginPresenter.login(200);
 
         BookPresenter bookPresenter = new BookPresenter();
         bookPresenter.setCallBack(main);
         bookPresenter.getBookInfo(200);
-    }
 
+    }
 
     @Override
     public <T> void onSuccess(T entity) {
